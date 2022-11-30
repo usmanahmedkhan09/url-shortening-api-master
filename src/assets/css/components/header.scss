@@ -21,7 +21,7 @@
     }
 
     /* **
-    media qurey fro mobile display
+    media qurey for mobile display
     **/
     @include for-mobile-only {
       li:not(:first-child) {
@@ -51,7 +51,7 @@
     }
 
     /* **
-    media qurey fro mobile display
+    media qurey for mobile display
     **/
     @include for-mobile-only {
       display: none;
@@ -59,11 +59,11 @@
   }
 
   .MenuIcon {
-    fill: black;
+    fill: rgb(155, 148, 148);
     display: none;
 
     /* **
-    media qurey fro mobile display
+    media qurey for mobile display
     **/
     @include for-mobile-only {
       display: block;
@@ -73,10 +73,70 @@
   }
 
   /* **
-    media qurey fro mobile display
+    media qurey for mobile display
     **/
 
   @include for-mobile-only {
     padding: 16px;
+  }
+
+  .mobileSidebar {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 350px;
+    width: calc(100% - 16px - 16px);
+    background-color: var(--color-primary-violet);
+    top: 100%;
+    border-radius: 10px;
+    padding: 24px;
+
+    ul {
+      list-style-type: none;
+      padding: unset;
+      margin: unset;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        display: block;
+        padding: unset;
+        color: white;
+        font-weight: 700;
+        font-size: 1.8rem;
+        margin: 10px 0px;
+      }
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: var(--color-gray-violet);
+      margin: 10px 0px;
+      width: 100%;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      button {
+        background-color: unset;
+        color: white;
+        margin: 10px 0px;
+        width: 100%;
+
+        &.active {
+          background-color: var(--color-primary-cayn);
+          color: white;
+        }
+      }
+    }
+
+    @include for-mobile-only {
+      display: flex;
+    }
   }
 }
