@@ -1,12 +1,12 @@
 <template>
-  <Layout />
+  <HeaderVue />
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-import Layout from "@/components/layout/index.vue";
+import HeaderVue from "./header.vue";
 
 export default defineComponent({
-  components: { Layout },
+  components: { HeaderVue },
   setup() {
     return {};
   },
