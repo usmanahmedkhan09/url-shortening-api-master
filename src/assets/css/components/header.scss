@@ -13,10 +13,14 @@
 
     li {
       margin: 0px 16px;
-      color: var(--color-primary-violet);
+      color: var(--color-gray);
       font-weight: 700;
       &:not(:first-child) {
         margin-top: 3px;
+      }
+
+      &:hover {
+        color: var(--color-primary-violet);
       }
     }
 
@@ -31,6 +35,7 @@
   }
 
   .buttons {
+    align-self: baseline;
     button {
       border: unset;
       background-color: white;
@@ -42,7 +47,7 @@
       border-radius: 50px;
       font-size: 1.6rem;
       cursor: pointer;
-      color: var(--color-primary-violet);
+      color: var(--color-gray);
 
       &:hover {
         background-color: var(--color-primary-cayn);
@@ -81,6 +86,7 @@
   }
 
   .mobileSidebar {
+    display: none;
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -135,6 +141,9 @@
       }
     }
 
+    /* **
+    media qurey for mobile display
+    **/
     @include for-mobile-only {
       display: flex;
     }
