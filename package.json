@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "i": "^0.3.7",
+    "sass": "^1.56.1",
     "vue": "^3.2.45"
   },
   "devDependencies": {
