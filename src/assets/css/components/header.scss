@@ -12,11 +12,11 @@
     display: flex;
 
     li {
-      margin: 0px 16px;
       color: var(--color-gray);
       font-weight: 700;
       &:not(:first-child) {
         margin-top: 3px;
+        margin: 0px 24px;
       }
 
       &:hover {
