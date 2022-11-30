@@ -10,14 +10,16 @@
       <button>Login</button>
       <button>Sign Up</button>
     </div>
+    <MenuIcon class="MenuIcon" />
   </header>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import LogoIcon from "@/components/icons/logo.vue";
+import MenuIcon from "@/components/icons/menu.vue";
 
 export default defineComponent({
-  components: { LogoIcon },
+  components: { LogoIcon, MenuIcon },
   setup() {
     return {};
   },

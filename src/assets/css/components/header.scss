@@ -1,8 +1,11 @@
+@use "../util/" as *;
+
 .header {
   padding: 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   ul {
     list-style-type: none;
     padding: unset;
@@ -13,7 +16,16 @@
       color: var(--color-primary-violet);
       font-weight: 700;
       &:not(:first-child) {
-        margin-top: 2px;
+        margin-top: 3px;
+      }
+    }
+
+    /* **
+    media qurey fro mobile display
+    **/
+    @include for-mobile-only {
+      li:not(:first-child) {
+        display: none;
       }
     }
   }
@@ -37,5 +49,34 @@
         color: white;
       }
     }
+
+    /* **
+    media qurey fro mobile display
+    **/
+    @include for-mobile-only {
+      display: none;
+    }
+  }
+
+  .MenuIcon {
+    fill: black;
+    display: none;
+
+    /* **
+    media qurey fro mobile display
+    **/
+    @include for-mobile-only {
+      display: block;
+      align-self: baseline;
+      margin-top: 6px;
+    }
+  }
+
+  /* **
+    media qurey fro mobile display
+    **/
+
+  @include for-mobile-only {
+    padding: 16px;
   }
 }
