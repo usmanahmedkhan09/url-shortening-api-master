@@ -2,6 +2,7 @@
   display: flex;
   padding: 64px 92px;
   gap: 24px;
+
   .card {
     background-color: white;
     min-height: 250px;
@@ -11,6 +12,13 @@
     width: calc(100% / 3);
     border-radius: 10px;
     padding: 32px;
+
+    &[class~="Records"] {
+      top: 40px;
+    }
+    &[class~="Customizable"] {
+      top: 80px;
+    }
 
     h3 {
       color: var(--color-primary-violet);
@@ -31,7 +39,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      top: -30px;
+      top: -40px;
       position: absolute;
     }
   }
