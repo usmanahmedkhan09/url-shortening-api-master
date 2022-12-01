@@ -13,14 +13,18 @@
         <WorkingIcon />
       </div>
     </div>
+    <div class="section--two">
+      <UrlShortenInput />
+    </div>
   </main>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import WorkingIcon from "@/components/icons/illustration-working.vue";
+import UrlShortenInput from "@/components/urlshortencomponent.vue";
 
 export default defineComponent({
-  components: { WorkingIcon },
+  components: { WorkingIcon, UrlShortenInput },
   setup() {
     return {};
   },

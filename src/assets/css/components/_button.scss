@@ -1,0 +1,15 @@
+button {
+  background-color: unset;
+  border: unset;
+  color: white;
+  margin: 5px 0px;
+  padding: 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1.6rem;
+
+  &.active {
+    background-color: var(--color-primary-cayn);
+    color: white;
+  }
+}
