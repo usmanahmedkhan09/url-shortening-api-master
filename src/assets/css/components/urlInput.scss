@@ -1,7 +1,10 @@
 .urlInput {
-  //   margin: 64px 96px 0px 0px;
-  width: 90%;
-  margin: 0 auto;
+  width: calc(100% - 188px);
+  margin: auto;
+  position: absolute;
+  top: -62px;
+  left: 0;
+  right: 0;
   .inputContainer {
     min-height: 100px;
     background-image: url("../../../images/bg-boost-desktop.svg");
@@ -38,5 +41,13 @@
       border-radius: 10px;
       padding: unset;
     }
+  }
+
+  .urlContainer {
+    margin-top: 20px;
+    height: 50px;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: white;
   }
 }
