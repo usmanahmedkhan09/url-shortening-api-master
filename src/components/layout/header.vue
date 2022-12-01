@@ -1,16 +1,18 @@
 <template>
   <header class="header">
-    <ul class="logo_wrapper">
-      <li><LogoIcon /></li>
-      <li>Features</li>
-      <li>Pricing</li>
-      <li>Resources</li>
-    </ul>
-    <div class="buttons">
-      <button>Login</button>
-      <button>Sign Up</button>
+    <div class="logo_wrapper">
+      <ul>
+        <li><LogoIcon /></li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Resources</li>
+      </ul>
+      <div class="buttons">
+        <button>Login</button>
+        <button>Sign Up</button>
+      </div>
+      <MenuIcon class="MenuIcon" />
     </div>
-    <MenuIcon class="MenuIcon" />
     <div class="mobileSidebar">
       <ul>
         <li>Features</li>
