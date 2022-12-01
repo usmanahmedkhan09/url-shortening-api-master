@@ -4,9 +4,15 @@ button {
   color: white;
   margin: 5px 0px;
   padding: 16px;
-  border-radius: 20px;
+  border-radius: 10px;
   font-weight: 700;
   font-size: 1.6rem;
+  text-align: center;
+  min-height: 20px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &.active {
     background-color: var(--color-primary-cayn);

@@ -39,7 +39,7 @@
 
     .buttons {
       align-self: baseline;
-      // margin-right: 10px;
+      display: flex;
 
       button {
         border: unset;
