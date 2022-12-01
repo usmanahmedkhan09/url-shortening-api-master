@@ -15,7 +15,7 @@
       display: flex;
 
       li {
-        color: var(--color-gray);
+        color: var(--color-gray-violet);
         font-weight: 700;
         &:not(:first-child) {
           margin-top: 3px;
@@ -52,7 +52,7 @@
         border-radius: 50px;
         font-size: 1.6rem;
         cursor: pointer;
-        color: var(--color-gray);
+        color: var(--color-gray-violet);
 
         &:hover {
           background-color: var(--color-primary-cayn);
