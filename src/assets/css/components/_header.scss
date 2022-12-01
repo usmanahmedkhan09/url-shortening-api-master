@@ -42,18 +42,10 @@
       display: flex;
 
       button {
-        border: unset;
-        background-color: white;
-        outline: unset;
-        min-width: 100px;
         margin: 0px 5px;
         padding: 10px;
-        font-weight: 700;
         border-radius: 50px;
-        font-size: 1.6rem;
-        cursor: pointer;
         color: var(--color-gray-violet);
-
         &:hover {
           background-color: var(--color-primary-cayn);
           color: white;

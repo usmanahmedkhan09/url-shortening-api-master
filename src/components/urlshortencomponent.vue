@@ -1,7 +1,7 @@
 <template>
   <div class="urlInput">
     <div class="inputContainer">
-      <input type="text" />
+      <input type="text" placeholder="Shorten a link here..." />
       <button class="button">Shorten it!</button>
     </div>
     <div class="urlContainer">

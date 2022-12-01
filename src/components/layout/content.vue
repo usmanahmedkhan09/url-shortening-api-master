@@ -15,16 +15,19 @@
     </div>
     <div class="section--two">
       <UrlShortenInput />
+      <StatisticsVue />
     </div>
+    <div class="section--three"></div>
   </main>
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
 import WorkingIcon from "@/components/icons/illustration-working.vue";
 import UrlShortenInput from "@/components/urlshortencomponent.vue";
+import StatisticsVue from "../statistics.vue";
 
 export default defineComponent({
-  components: { WorkingIcon, UrlShortenInput },
+  components: { WorkingIcon, UrlShortenInput, StatisticsVue },
   setup() {
     return {};
   },
