@@ -31,5 +31,53 @@
   .body {
     min-height: 250px;
     background-color: var(--color-deep-violet);
+    display: flex;
+    padding: 64px 94px;
+
+    svg {
+      flex-grow: 1;
+      flex: 40%;
+      path {
+        fill: white !important;
+      }
+    }
+
+    ul {
+      flex: calc(100% / 3);
+      li {
+        font-size: 1.4rem;
+        color: white;
+
+        &:first-child {
+          font-weight: 700;
+        }
+
+        &:not(:first-child) {
+          color: var(--color-gray);
+          margin: 16px 0px;
+        }
+      }
+    }
+
+    .icons_wrapper {
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      margin: 0px 10px;
+
+      &:hover {
+        background-color: var(--color-primary-cayn);
+      }
+
+      img {
+        width: 20px !important;
+        height: 20px !important;
+        //   object-fit: cover;
+      }
+    }
   }
 }

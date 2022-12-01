@@ -8,6 +8,12 @@
   --color-gray-violet: hsl(257, 7%, 63%);
   --color-dark-blue: hsl(255, 11%, 22%);
   --color-deep-violet: hsl(260, 8%, 14%);
+
+  ul {
+    list-style: none;
+    padding: none;
+    margin: none;
+  }
 }
 
 html {
