@@ -60,11 +60,14 @@
   }
 
   .section--two {
-    min-height: 800px;
+    // min-height: 800px;
     background-color: #eff1f7;
     margin-top: 110px;
+    // margin-bottom: 32px;
+    padding-bottom: 110px;
 
     .statistics {
+      // margin-bottom: 32px;
       .des {
         max-width: 450px;
         text-align: center;

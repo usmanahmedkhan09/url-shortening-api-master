@@ -1,0 +1,35 @@
+.footer {
+  //   margin-top: 32px;
+  .headSection {
+    min-height: 200px;
+    background-image: url("../images/bg-boost-desktop.svg");
+    background: {
+      size: cover;
+      repeat: no-repeat;
+      position: center center;
+    }
+    background-color: var(--color-primary-violet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+
+    h2 {
+      font-weight: 700;
+      font-size: 3.2rem;
+      color: white;
+    }
+
+    button {
+      background-color: var(--color-primary-cayn);
+      min-width: 150px;
+      max-height: 40px;
+      border-radius: 20px;
+    }
+  }
+
+  .body {
+    min-height: 250px;
+    background-color: var(--color-deep-violet);
+  }
+}
