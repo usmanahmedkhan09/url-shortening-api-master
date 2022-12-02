@@ -30,31 +30,51 @@
       flex-direction: column;
       padding: 16px;
 
-      input {
-        max-width: unset !important;
+      .input_wrapper {
         width: 100%;
         flex: 100%;
-      }
+        input {
+          max-width: unset !important;
+        }
 
-      button {
-        min-width: 100%;
-        padding: 16px !important;
+        button {
+          min-width: 100%;
+          padding: 16px !important;
+        }
       }
     }
 
-    input {
+    .input_wrapper {
       flex: 80%;
       max-width: 80%;
-      min-height: 50px;
-      border-radius: 10px;
-      border: unset;
-      outline: unset;
-      font-size: 1.6rem;
-      padding: 0px 16px;
-
-      &:focus {
-        outline: unset;
+      input {
+        width: 100%;
+        min-height: 50px;
+        border-radius: 10px;
         border: unset;
+        outline: unset;
+        font-size: 1.6rem;
+        padding: 0px 16px;
+
+        &:focus {
+          outline: unset;
+          border: unset;
+        }
+
+        &.error {
+          border: 2px solid var(--color-secondary-red);
+
+          &::placeholder {
+            color: var(--color-secondary-red);
+          }
+        }
+      }
+
+      p {
+        position: absolute;
+        color: var(--color-secondary-red);
+        font-size: 1.4rem;
+        font-weight: normal;
       }
     }
 

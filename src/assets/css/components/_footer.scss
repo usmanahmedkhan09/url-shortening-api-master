@@ -75,9 +75,8 @@
     }
 
     .icons_wrapper {
-      @include for-mobile-only {
-        display: flex;
-      }
+      display: flex;
+
       .icons_wrapper {
         height: 30px;
         width: 30px;
