@@ -4,6 +4,7 @@
       <div class="input_wrapper">
         <input
           @paste="setToInitialState()"
+          @keypress="setToInitialState()"
           v-model="data.url"
           type="text"
           placeholder="Shorten a link here..."

@@ -9,6 +9,12 @@
     padding: 16px;
   }
 
+  hr {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    border: 6px solid var(--color-primary-cayn);
+  }
   .card {
     background-color: white;
     min-height: 250px;

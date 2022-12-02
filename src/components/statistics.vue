@@ -8,6 +8,7 @@
       </p>
     </div>
     <div class="card_container">
+      <hr />
       <div
         class="card"
         v-for="(card, index) in statistics"
