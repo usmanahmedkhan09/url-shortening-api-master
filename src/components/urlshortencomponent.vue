@@ -16,7 +16,9 @@
     </div>
     <div class="urlContainer" v-for="(link, index) in shortLinks" :key="index">
       <p class="longurl">{{ link.original_link }}</p>
-      <p class="shorturl">{{ link.full_short_link }}</p>
+      <p class="shorturl" @click="moveToLink(link.code)">
+        {{ link.full_short_link }}
+      </p>
       <button>Copy</button>
     </div>
   </div>
@@ -26,11 +28,12 @@ import { defineComponent } from "vue";
 import { useApiShorten } from "@/composables/composables";
 export default defineComponent({
   setup() {
-    const { data, shortenApiUrl, shortLinks } = useApiShorten();
+    const { data, shortenApiUrl, shortLinks, moveToLink } = useApiShorten();
     return {
       data,
       shortLinks,
       shortenApiUrl,
+      moveToLink,
     };
   },
 });

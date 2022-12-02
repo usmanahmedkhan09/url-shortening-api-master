@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import axios from 'axios'
+import { useRouter, useRoute } from 'vue-router'
 
 export const useApiShorten = () =>
 {
@@ -8,6 +9,10 @@ export const useApiShorten = () =>
         error: false,
         errorMessage: ''
     })
+
+    const router = useRouter()
+
+    const route = useRoute()
 
     const shortLinks = ref<any[]>([])
 
@@ -23,6 +28,25 @@ export const useApiShorten = () =>
         }).catch((error) =>
         {
             hanldeServerErrors(error.response.data)
+        })
+    }
+
+    const moveToLink = async (code: any) =>
+    {
+        await axios.post(`https://api.shrtco.de/v2/info?code=${code}`).then((response) =>
+        {
+            if (response.data.ok)
+            {
+                let res = response.data.result
+                let a = document.createElement('a')
+                a.href = res.url
+                a.target = '_blank'
+                a.click()
+
+            }
+        }).catch((error) =>
+        {
+            // hanldeServerErrors(error.response.data)
         })
     }
 
@@ -58,6 +82,7 @@ export const useApiShorten = () =>
     return {
         data,
         shortLinks,
-        shortenApiUrl
+        shortenApiUrl,
+        moveToLink
     }
 }
