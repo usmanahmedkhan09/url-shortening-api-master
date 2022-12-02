@@ -25,8 +25,10 @@
         <li>Careers</li>
         <li>Contact</li>
       </ul>
-      <div class="icons_wrapper" v-for="(icon, index) in icons" :key="index">
-        <img :src="getImageUrl(icon)" alt="" />
+      <div class="icons_wrapper">
+        <div class="icons_wrapper" v-for="(icon, index) in icons" :key="index">
+          <img :src="getImageUrl(icon)" alt="" />
+        </div>
       </div>
     </div>
   </footer>

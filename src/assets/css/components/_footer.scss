@@ -1,3 +1,5 @@
+@use "../util/" as *;
+
 .footer {
   //   margin-top: 32px;
   .headSection {
@@ -34,6 +36,12 @@
     display: flex;
     padding: 64px 94px;
 
+    @include for-mobile-only {
+      flex-direction: column;
+      padding: 16px;
+      align-items: center;
+    }
+
     svg {
       flex-grow: 1;
       flex: 40%;
@@ -44,6 +52,13 @@
 
     ul {
       flex: calc(100% / 3);
+
+      @include for-mobile-only {
+        margin-top: 24px;
+        padding: unset;
+        flex: 100%;
+        text-align: center;
+      }
       li {
         font-size: 1.4rem;
         color: white;
@@ -60,23 +75,28 @@
     }
 
     .icons_wrapper {
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 16px;
-      margin: 0px 10px;
-
-      &:hover {
-        background-color: var(--color-primary-cayn);
+      @include for-mobile-only {
+        display: flex;
       }
+      .icons_wrapper {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        margin: 0px 10px;
 
-      img {
-        width: 20px !important;
-        height: 20px !important;
-        //   object-fit: cover;
+        &:hover {
+          background-color: var(--color-primary-cayn);
+        }
+
+        img {
+          width: 20px !important;
+          height: 20px !important;
+          //   object-fit: cover;
+        }
       }
     }
   }

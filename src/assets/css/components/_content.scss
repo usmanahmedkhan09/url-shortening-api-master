@@ -1,7 +1,7 @@
 @use "../util/" as *;
 .content {
   @include for-mobile-only {
-    padding: 16px;
+    // padding: 16px;
   }
   .section--one {
     min-height: 400px;
@@ -12,9 +12,17 @@
     padding: 32px 0px 0px 96px;
 
     @include for-mobile-only {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      padding: 16px;
       .des {
         text-align: center;
+        button {
+          margin: 24px auto !important;
+        }
+      }
+      .image_wrapper {
+        min-height: fit-content;
+        min-width: 500px;
       }
     }
     .des {
@@ -62,6 +70,7 @@
   .section--two {
     // min-height: 800px;
     background-color: #eff1f7;
+    // background-color: gray;
     margin-top: 110px;
     // margin-bottom: 32px;
     padding-bottom: 110px;
@@ -73,6 +82,11 @@
         text-align: center;
         margin: 0 auto;
 
+        @include for-mobile-only {
+          max-width: 100%;
+          padding: 16px;
+          margin-bottom: 32px;
+        }
         h2 {
           font-weight: 700;
           font-size: 3.2rem;

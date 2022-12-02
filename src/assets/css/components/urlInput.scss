@@ -1,10 +1,14 @@
+@use "../util/" as *;
+
 .urlInput {
   width: calc(100% - 188px);
   margin: auto;
-  //   position: absolute;
   top: -62px;
-  //   left: 0;
-  //   right: 0;
+
+  @include for-mobile-only {
+    width: calc(100% - 32px);
+    // margin: unset;
+  }
   .inputContainer {
     min-height: 100px;
     background-image: url("../images/bg-boost-desktop.svg");
@@ -21,6 +25,22 @@
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+
+    @include for-mobile-only {
+      flex-direction: column;
+      padding: 16px;
+
+      input {
+        max-width: unset !important;
+        width: 100%;
+        flex: 100%;
+      }
+
+      button {
+        min-width: 100%;
+        padding: 16px !important;
+      }
+    }
 
     input {
       flex: 80%;
@@ -58,8 +78,21 @@
     justify-content: space-between;
     align-items: center;
 
+    @include for-mobile-only {
+      flex-direction: column;
+      align-items: flex-start;
+      height: fit-content;
+      gap: 10px;
+    }
+
     .longurl {
       flex-grow: 1;
+
+      @include for-mobile-only {
+        border-bottom: 1px solid var(--color-gray);
+        padding-bottom: 10px;
+        width: 100%;
+      }
     }
 
     .shorturl {
@@ -75,6 +108,12 @@
 
       &.copied {
         background-color: var(--color-deep-violet);
+      }
+
+      @include for-mobile-only {
+        margin-left: unset;
+        width: 100%;
+        max-height: 50px;
       }
     }
   }

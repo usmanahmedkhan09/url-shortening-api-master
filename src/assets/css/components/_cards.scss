@@ -1,7 +1,13 @@
+@use "../util/" as *;
 .card_container {
   display: flex;
   padding: 64px 92px;
   gap: 24px;
+
+  @include for-mobile-only {
+    flex-direction: column;
+    padding: 16px;
+  }
 
   .card {
     background-color: white;
@@ -13,11 +19,24 @@
     border-radius: 10px;
     padding: 32px;
 
+    @include for-mobile-only {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
     &[class~="Records"] {
       top: 40px;
+
+      @include for-mobile-only {
+        top: unset;
+      }
     }
     &[class~="Customizable"] {
       top: 80px;
+      @include for-mobile-only {
+        top: unset;
+      }
     }
 
     h3 {
@@ -41,6 +60,12 @@
       align-items: center;
       top: -40px;
       position: absolute;
+
+      @include for-mobile-only {
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
     }
   }
 }
