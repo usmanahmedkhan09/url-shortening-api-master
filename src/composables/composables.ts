@@ -1,6 +1,8 @@
 import { ref } from 'vue'
 import axios from 'axios'
 
+
+const isDisable = ref(false)
 export const useApiShorten = () =>
 {
     const data = ref({
@@ -13,17 +15,21 @@ export const useApiShorten = () =>
 
     const shortenApiUrl = async () =>
     {
+        isDisable.value = true
         await axios.post(`https://api.shrtco.de/v2/shorten?url=${data.value.url}`).then((response) =>
         {
             if (response.data.ok)
             {
                 shortLinks.value.push({ ...response.data.result })
                 data.value.url = ''
+                isDisable.value = false
             }
         }).catch((error) =>
         {
             hanldeServerErrors(error.response.data)
+            isDisable.value = false
         })
+
     }
 
     const moveToLink = async (code: any) =>
@@ -96,6 +102,7 @@ export const useApiShorten = () =>
     return {
         data,
         shortLinks,
+        isDisable,
         shortenApiUrl,
         moveToLink,
         copyToClipboard
