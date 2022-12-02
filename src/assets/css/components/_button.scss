@@ -18,4 +18,8 @@ button {
     background-color: var(--color-primary-cayn);
     color: white;
   }
+
+  &.isCopied {
+    background-color: var(--color-deep-violet) !important;
+  }
 }

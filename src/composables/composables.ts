@@ -1,6 +1,5 @@
 import { ref } from 'vue'
 import axios from 'axios'
-import { useRouter, useRoute } from 'vue-router'
 
 export const useApiShorten = () =>
 {
@@ -9,10 +8,6 @@ export const useApiShorten = () =>
         error: false,
         errorMessage: ''
     })
-
-    const router = useRouter()
-
-    const route = useRoute()
 
     const shortLinks = ref<any[]>([])
 
@@ -76,13 +71,33 @@ export const useApiShorten = () =>
                 data.value.error = true
                 break;
             default:
-            // code block
         }
     }
+
+    const copyToClipboard = (link: any, e: any) =>
+    {
+        shortLinks.value.filter((item: any) =>
+        {
+            if (item.original_link == link)
+            {
+                item["isCopied"] = true
+            }
+            return item
+        })
+
+        const clipboard = e.clipboardData ||
+            e.originalEvent?.clipboardData ||
+            navigator.clipboard;
+        clipboard.writeText(link)
+
+    }
+
+
     return {
         data,
         shortLinks,
         shortenApiUrl,
-        moveToLink
+        moveToLink,
+        copyToClipboard
     }
 }

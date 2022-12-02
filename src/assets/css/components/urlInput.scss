@@ -7,7 +7,6 @@
 
   @include for-mobile-only {
     width: calc(100% - 32px);
-    // margin: unset;
   }
   .inputContainer {
     min-height: 100px;
@@ -31,7 +30,8 @@
       padding: 16px;
 
       .input_wrapper {
-        width: 100%;
+        width: 100% !important;
+        max-width: unset !important;
         flex: 100%;
         input {
           max-width: unset !important;
@@ -84,7 +84,7 @@
       flex: 20%;
       height: 50px;
       border-radius: 10px;
-      padding: unset;
+      // padding: unset;
     }
   }
 

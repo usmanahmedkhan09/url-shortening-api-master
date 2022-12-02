@@ -19,7 +19,12 @@
       <p class="shorturl" @click="moveToLink(link.code)">
         {{ link.full_short_link }}
       </p>
-      <button>Copy</button>
+      <button
+        @click="copyToClipboard(link.original_link, $event)"
+        :class="link && link.isCopied ? 'isCopied' : ''"
+      >
+        {{ link && link.isCopied ? "Copied!" : "Copy" }}
+      </button>
     </div>
   </div>
 </template>
@@ -28,12 +33,14 @@ import { defineComponent } from "vue";
 import { useApiShorten } from "@/composables/composables";
 export default defineComponent({
   setup() {
-    const { data, shortenApiUrl, shortLinks, moveToLink } = useApiShorten();
+    const { data, shortenApiUrl, shortLinks, moveToLink, copyToClipboard } =
+      useApiShorten();
     return {
       data,
       shortLinks,
       shortenApiUrl,
       moveToLink,
+      copyToClipboard,
     };
   },
 });
