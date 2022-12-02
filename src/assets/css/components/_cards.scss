@@ -12,9 +12,10 @@
   hr {
     position: absolute;
     top: 50%;
-    width: 90%;
+    width: calc(100% - 184px);
     border: 6px solid var(--color-primary-cayn);
   }
+
   .card {
     background-color: white;
     min-height: 250px;
