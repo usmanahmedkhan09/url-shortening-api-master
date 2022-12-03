@@ -11,9 +11,9 @@
         <button>Login</button>
         <button>Sign Up</button>
       </div>
-      <MenuIcon class="MenuIcon" />
+      <MenuIcon class="MenuIcon" @click="show = !show" />
     </div>
-    <div class="mobileSidebar">
+    <div class="mobileSidebar" v-if="show">
       <ul>
         <li>Features</li>
         <li>Pricing</li>
@@ -28,14 +28,17 @@
   </header>
 </template>
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import LogoIcon from "@/components/icons/logo.vue";
 import MenuIcon from "@/components/icons/menu.vue";
 
 export default defineComponent({
   components: { LogoIcon, MenuIcon },
   setup() {
-    return {};
+    const show = ref(false);
+    return {
+      show,
+    };
   },
 });
 </script>
