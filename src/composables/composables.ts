@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
 
@@ -21,6 +21,7 @@ export const useApiShorten = () =>
             if (response.data.ok)
             {
                 shortLinks.value.push({ ...response.data.result })
+                window.localStorage.setItem('shortLinks', JSON.stringify(shortLinks.value))
                 data.value.url = ''
                 isDisable.value = false
             }
@@ -99,6 +100,14 @@ export const useApiShorten = () =>
     }
 
 
+    onMounted(() =>
+    {
+        let arr = window.localStorage.getItem('shortLinks') as string
+        if (arr != null)
+        {
+            shortLinks.value = JSON.parse(arr)
+        }
+    })
     return {
         data,
         shortLinks,
